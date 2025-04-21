@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Promessa</title>
+</head>
+<body>
+  <h1>Aguardando a promessa...</h1>
+
+  <script>
+    function esperarSegundos(segundos) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(`Esperei ${segundos} segundos`);
+        }, segundos * 1000);
+      });
+    }
+
+    // Teste
+    esperarSegundos(2).then(mensagem => console.log(mensagem));
+  </script>
+</body>
+</html>
